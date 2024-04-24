@@ -17,7 +17,7 @@ Hooks.once('init', async function() {
         restricted: false
     });
 
-    CONFIG.dice.dieTypes = [
+    CONFIG.Dice.DieTypes = [
         { id: "d2", faces: 2, icon: "fa-dice-d2" },
         { id: "d4", faces: 4, icon: "fa-dice-d4" },
         { id: "d6", faces: 6, icon: "fa-dice-d6" },

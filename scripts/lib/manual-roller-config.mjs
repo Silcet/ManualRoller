@@ -17,7 +17,7 @@ export default class DiceConfig extends FormApplication {
         const context = await super.getData(options);
 
         const config = game.settings.get("manual-roller", "diceSettings");
-        const dieTypes = CONFIG.dice.dieTypes;
+        const dieTypes = CONFIG.Dice.DieTypes;
         for (const dieType of dieTypes) {
             dieType.value = config[dieType.id] || 1;
         }
