@@ -26,7 +26,8 @@
         ]
     },
     "esmodules": [
-        "scripts/manualroller.mjs"
+        "scripts/manualroller.mjs",
+        "scripts/lib/manual-roller-config.mjs"
     ],
     "scripts": [
         "scripts/lib/manual-roller-resolver.js"
