@@ -26,13 +26,10 @@
         ]
     },
     "esmodules": [
-        "scripts/module.js"
+        "scripts/manual-roller.mjs"
     ],
     "scripts": [
-        "scripts/lib/lib.js"
-    ],
-    "styles": [
-        "styles/module.css"
+        "scripts/lib/manual-roller-resolver.js"
     ],
     "url": "#{URL}#",
     "manifest": "#{MANIFEST}#",
