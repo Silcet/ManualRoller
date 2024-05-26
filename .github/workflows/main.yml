@@ -95,7 +95,7 @@ jobs:
         id: sub_manifest_link_version
         uses: cschleiden/replace-tokens@v1
         with:
-          files: 'module.json'
+          files: 'FoundryModule/module.json'
         env:
           VERSION: ${{steps.get_version.outputs.version-without-v}}
           URL: ${{ env.project_url }}
@@ -108,6 +108,8 @@ jobs:
       # your packaged module, add them here.
       - name: Create Module Archive
         run: |
+          # Zip from within the module directory
+          cd FoundryModule/ && \ 
           # Note that `zip` will only emit warnings when a file or directory
           # doesn't exist, it will not fail.
           zip                                    \
@@ -139,6 +141,6 @@ jobs:
           draft: ${{ github.event.release.unpublished }}
           prerelease: ${{ github.event.release.prerelease }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './module.json, ./module.zip'
+          artifacts: './FoundryModule/module.json, ./module.zip'
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
