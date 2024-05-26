@@ -1,0 +1,6 @@
+/target
+bazel-bin
+bazel-out
+bazel-ManualRoller
+bazel-testlogs
+
